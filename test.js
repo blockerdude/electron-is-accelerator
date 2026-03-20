@@ -9,7 +9,8 @@ const keys = [
     'G',
     'Z',
     'F1',
-    'F5',
+    'F10',
+    'F11',
     'F24',
     '~',
     '!',
@@ -40,7 +41,14 @@ const keys = [
     'MediaPreviousTrack',
     'MediaStop',
     'MediaPlayPause',
-    'PrintScreen'
+    'PrintScreen',
+    'PrintScreen',
+    'Capslock',
+    'Numlock',
+    'num0',
+    'num9',
+    'numadd',
+    'nummult'
 ];
 
 const modifiers = [
@@ -54,7 +62,8 @@ const modifiers = [
     'Option',
     'AltGr',
     'Shift',
-    'Super'
+    'Super',
+    'Meta'
 ];
 
 test('multiple modifier', t => t.true(isAccelerator('CommandOrControl+Shift+Z')));
@@ -62,6 +71,8 @@ test('multiple keys', t => t.false(isAccelerator('A+Z')));
 test('typos', t => t.false(isAccelerator('CommandOrContol+A')));
 test('modifiers without keys', t => t.false(isAccelerator('CmdOrCtrl')));
 test('multiple modifiers without keys', t => t.false(isAccelerator('CmdOrCtrl+Ctrl')));
+test('capitalized numkeys', t=> t.false(isAccelerator('Num0')))
+test('capitalized numpad', t=> t.false(isAccelerator('Numdiv')))
 test('empty string', t => t.false(isAccelerator('')));
 
 // tests to check each modifiers

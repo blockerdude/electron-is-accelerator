@@ -1,6 +1,6 @@
 # electron-is-accelerator
 
-Check if a string is a valid [Electron accelerator](https://github.com/electron/electron/blob/master/docs/api/accelerator.md) and return a boolean. This module can be used to validate user defined accelerators before using them with [MenuItems](http://electron.atom.io/docs/api/menu-item/).
+Check if a string is a valid [Electron accelerator](https://www.electronjs.org/docs/latest/tutorial/keyboard-shortcuts) and return a boolean. This module can be used to validate user defined accelerators before using them with [MenuItems](http://electron.atom.io/docs/api/menu-item/).
 
 ## Installation
 
